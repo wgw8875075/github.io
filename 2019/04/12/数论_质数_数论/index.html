@@ -49,16 +49,16 @@
 <link rel="stylesheet" href="/css/main.css?v=7.1.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/bolg.jpg?v=7.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bolg.jpg?v=7.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bolg.jpg?v=7.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+  <link rel="mask-icon" href="/images/bolg.jpg?v=7.1.0" color="#222">
 
 
 
@@ -79,7 +79,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -97,15 +97,16 @@
 
 
   <meta name="description" content="质数定义若一个正整数无法被1和它自身之外的任何自然数整除，则称该数为质数（素数），否则该数为合数。 质数的判定用试除法：">
+<meta name="keywords" content="数论,质数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zoey的博客">
-<meta property="og:url" content="http://wgw8875075.github.io/2019/04/09/数论_质数_数论/index.html">
+<meta property="og:title" content="数论问题之质数">
+<meta property="og:url" content="http://wgw8875075.github.io/2019/04/12/数论_质数_数论/index.html">
 <meta property="og:site_name" content="Zoey的博客">
 <meta property="og:description" content="质数定义若一个正整数无法被1和它自身之外的任何自然数整除，则称该数为质数（素数），否则该数为合数。 质数的判定用试除法：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-11T08:10:55.946Z">
+<meta property="og:updated_time" content="2019-04-12T04:35:59.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zoey的博客">
+<meta name="twitter:title" content="数论问题之质数">
 <meta name="twitter:description" content="质数定义若一个正整数无法被1和它自身之外的任何自然数整除，则称该数为质数（素数），否则该数为合数。 质数的判定用试除法：">
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://wgw8875075.github.io/2019/04/09/数论_质数_数论/">
+  <link rel="canonical" href="http://wgw8875075.github.io/2019/04/12/数论_质数_数论/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title> | Zoey的博客</title>
+  <title>数论问题之质数 | Zoey的博客</title>
   
 
 
@@ -219,6 +220,8 @@
     
 
     
+      
+    
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
@@ -235,6 +238,8 @@
       
     
 
+    
+      
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
@@ -253,8 +258,10 @@
     
 
     
+      
+    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -270,8 +277,10 @@
     
 
     
+      
+    
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">0</span></a>
 
   </li>
         
@@ -287,8 +296,10 @@
     
 
     
+      
+    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
 
   </li>
         
@@ -303,6 +314,8 @@
       
     
 
+    
+      
     
 
     <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
@@ -357,7 +370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wgw8875075.github.io/2019/04/09/数论_质数_数论/">
+    <link itemprop="mainEntityOfPage" href="http://wgw8875075.github.io/2019/04/12/数论_质数_数论/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zoey">
@@ -374,7 +387,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">数论问题之质数
 
               
             
@@ -400,24 +413,12 @@
                 
               
 
-              <time title="创建时间：2019-04-09 08:52:35" itemprop="dateCreated datePublished" datetime="2019-04-09T08:52:35+08:00">2019-04-09</time>
+              <time title="创建时间：2019-04-12 11:55:16 / 修改时间：12:35:59" itemprop="dateCreated datePublished" datetime="2019-04-12T11:55:16+08:00">2019-04-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-11 16:10:55" itemprop="dateModified" datetime="2019-04-11T16:10:55+08:00">2019-04-11</time>
               
             
           </span>
@@ -480,11 +481,35 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/数论/" rel="tag"># 数论</a>
+          
+            <a href="/tags/质数/" rel="tag"># 质数</a>
+          
+        </div>
+      
 
       
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/12/categories/" rel="prev" title="categories">
+                categories <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -552,7 +577,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -560,6 +585,21 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
               
             </nav>
           
@@ -653,8 +693,6 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
 
 
 
@@ -712,11 +750,24 @@
 
 
 
+  
+  
 
 
 
+  
+  
 
 
+
+  
+  
+
+
+
+  
+  
+  <script id="ribbon" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
 
 
 
@@ -730,6 +781,18 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_lines.min.js"></script>
+
+  
+  <script src="/lib/three/canvas_sphere.min.js"></script>
 
 
   
@@ -764,20 +827,8 @@
 
 
   
-
-  
-
-  
-
-  
-
-
-  
-
-
-  
-
-
+  <script src="/js/js.cookie.js?v=7.1.0"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.0"></script>
 
 
   
@@ -786,9 +837,14 @@
 
   
 
-  
 
   
+
+
+  
+
+
+
 
   
 
@@ -803,6 +859,51 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
 
   
 
