@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="题意：    在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？思路：">
+  <meta name="description" content="题意：在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？ 思路：">
 <meta name="keywords" content="概率dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hdu4576 Robot">
 <meta property="og:url" content="http://wgw8875075.github.io/2019/04/14/概率dp/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="题意：    在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？思路：">
+<meta property="og:description" content="题意：在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？ 思路：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-14T08:52:06.947Z">
+<meta property="og:updated_time" content="2019-04-16T08:07:49.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hdu4576 Robot">
-<meta name="twitter:description" content="题意：    在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？思路：">
+<meta name="twitter:description" content="题意：在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？ 思路：">
 
 
 
@@ -449,12 +449,24 @@
                 
               
 
-              <time title="创建时间：2019-04-14 16:14:45 / 修改时间：16:52:06" itemprop="dateCreated datePublished" datetime="2019-04-14T16:14:45+08:00">2019-04-14</time>
+              <time title="创建时间：2019-04-14 16:14:45" itemprop="dateCreated datePublished" datetime="2019-04-14T16:14:45+08:00">2019-04-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-16 16:07:49" itemprop="dateModified" datetime="2019-04-16T16:07:49+08:00">2019-04-16</time>
               
             
           </span>
@@ -506,8 +518,10 @@
       
 
       
-        <p><strong><em>题意：</em></strong><br>    在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？<br><strong><em>思路：</em></strong><br><a id="more"></a><br>    一道标准的概率dp题，每次走路都由上一步推导而来，只需要将上一步所走的路存起来,最后再把l到r这个区间所有的概率加起来即可。<br><strong><em>代码</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">double dp[2][210];</span><br><span class="line">int main()&#123;</span><br><span class="line">	ios::sync_with_stdio(false);</span><br><span class="line">	cin.tie(0);</span><br><span class="line">	int n,m,l,r;</span><br><span class="line">	while(cin&gt;&gt;n&gt;&gt;m&gt;&gt;l&gt;&gt;r&amp;&amp;n+m+l+r)&#123;</span><br><span class="line">		int t=0;</span><br><span class="line">		for(int i=0;i&lt;=n;i++) dp[0][i]=0;</span><br><span class="line">		dp[0][0]=1;</span><br><span class="line">		while(m--)&#123;</span><br><span class="line">			int x;</span><br><span class="line">			cin&gt;&gt;x;</span><br><span class="line">			for(int i=0;i&lt;n;i++) dp[t^1][i]=0;</span><br><span class="line">			for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">				if(dp[t][i])&#123;</span><br><span class="line">					dp[t^1][(i+x)%n]+=0.5*dp[t][i];</span><br><span class="line">					dp[t^1][(i-x+n)%n]+=0.5*dp[t][i];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			t^=1;</span><br><span class="line">		&#125;</span><br><span class="line">		double ans=0;</span><br><span class="line">		for(int i=l-1;i&lt;=r-1;i++)&#123;</span><br><span class="line">			ans+=dp[t][i];</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;%.4lf\n&quot;,ans);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <h3 id="题意："><a href="#题意：" class="headerlink" title="题意："></a><strong><em>题意：</em></strong></h3><pre><code>在一个环形区域里面分成n个部分，初始在第一个部分(顺时针1到n)，截下来有m次操作，每次可以顺势针或者逆时针走a步问最后走在l到r这个区域内的概率是多少？
+</code></pre><h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a><strong><em>思路：</em></strong></h3><a id="more"></a>
+<pre><code>一道标准的概率dp题，每次走路都由上一步推导而来，只需要将上一步所走的路存起来,最后再把l到r这个区间所有的概率加起来即可。
+</code></pre><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong><em>代码</em></strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">double dp[2][210];</span><br><span class="line">int main()&#123;</span><br><span class="line">	ios::sync_with_stdio(false);</span><br><span class="line">	cin.tie(0);</span><br><span class="line">	int n,m,l,r;</span><br><span class="line">	while(cin&gt;&gt;n&gt;&gt;m&gt;&gt;l&gt;&gt;r&amp;&amp;n+m+l+r)&#123;</span><br><span class="line">		int t=0;</span><br><span class="line">		for(int i=0;i&lt;=n;i++) dp[0][i]=0;</span><br><span class="line">		dp[0][0]=1;</span><br><span class="line">		while(m--)&#123;</span><br><span class="line">			int x;</span><br><span class="line">			cin&gt;&gt;x;</span><br><span class="line">			for(int i=0;i&lt;n;i++) dp[t^1][i]=0;</span><br><span class="line">			for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">				if(dp[t][i])&#123;</span><br><span class="line">					dp[t^1][(i+x)%n]+=0.5*dp[t][i];</span><br><span class="line">					dp[t^1][(i-x+n)%n]+=0.5*dp[t][i];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			t^=1;</span><br><span class="line">		&#125;</span><br><span class="line">		double ans=0;</span><br><span class="line">		for(int i=l-1;i&lt;=r-1;i++)&#123;</span><br><span class="line">			ans+=dp[t][i];</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;%.4lf\n&quot;,ans);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -599,8 +613,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -679,23 +702,19 @@
                 <span class="links-of-author-item">
                   
                   
-                    
-                  
                   
                     
                   
-                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
                   
                   
-                    
-                  
                   
                     
                   
-                  <a href="mailto:yourname@gmail.com" title="E-Mail &rarr; mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:wgw8875075@163.com" title="E-Mail &rarr; mailto:wgw8875075@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
                 </span>
               
             </div>
@@ -716,10 +735,6 @@
                     <a href="http://www.fzchen.top/" title="http://www.fzchen.top/" rel="noopener" target="_blank">fzchen</a>
                   </li>
                 
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.cnblogs.com/cloudplankroader/" title="https://www.cnblogs.com/cloudplankroader/" rel="noopener" target="_blank">回首不知身是客</a>
-                  </li>
-                
               </ul>
             </div>
           
@@ -732,6 +747,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意："><span class="nav-number">1.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number">2.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
