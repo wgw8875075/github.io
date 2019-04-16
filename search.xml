@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Codeforces Round]]></title>
+    <title><![CDATA[Median String]]></title>
     <url>%2F2019%2F04%2F15%2F%E6%A8%A1%E6%8B%9F%E6%8B%9F-%E4%B8%AD%E7%AD%89%E5%AD%97%E7%AC%A6%2F</url>
     <content type="text"><![CDATA[Codeforces Round #550 (Div. 3)E. Median String 题意：输入一个n表示一个字符串里面有几个字符，然后寻找这俩个字符串中间的字符。 思路：模拟26位进制数表示 代码：123456789101112131415161718192021222324#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=2e5+10;int ans[maxn];int main()&#123; int n; cin&gt;&gt;n; string a,b; cin&gt;&gt;a&gt;&gt;b; for(int i=n-1;i&gt;=0;i--)&#123; ans[i]=a[i]-'a'+b[i]-'a'; if(ans[i]&amp;1)&#123; ans[i+1]+=13; ans[i]=ans[i]-1&gt;&gt;1; ans[i]+=ans[i+1]/26; ans[i+1]%=26; &#125; else&#123; ans[i]&gt;&gt;=1; &#125; &#125; for(int i=0;i&lt;n;i++) printf("%c",'a'+ans[i]); cout&lt;&lt;endl;&#125;]]></content>
       <categories>
