@@ -103,18 +103,17 @@
 
 
 
-  <meta name="description" content="Codeforces Round #550 (Div. 3)E. Median String 题意：输入一个n表示一个字符串里面有几个字符，然后寻找这俩个字符串中间的字符。 思路：模拟26位进制数表示">
-<meta name="keywords" content="模拟">
+  <meta name="description" content="介绍最长上升子序列问题，也就是Longest increasing subsequence，缩写为LIS。是指在一个序列中求长度最长的一个上升子序列的问题，是动态规划中一个相当经典问题。在这里我们可以看到，这个上升实质上就是一个对&amp;lt;进行定义的过程，所以我们求解的其实是一类问题，也就是在给定序列中求解长度最长的符合某一性质的子序列的问题。 解法一状态设计：F[i]代表以A[i]结尾的LIS的长">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Median String">
-<meta property="og:url" content="http://wgw8875075.github.io/2019/04/15/模拟拟-中等字符/index.html">
+<meta property="og:title" content="Devil Zoey的博客">
+<meta property="og:url" content="http://wgw8875075.github.io/2019/04/18/最长上升子序列(LIS)/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="Codeforces Round #550 (Div. 3)E. Median String 题意：输入一个n表示一个字符串里面有几个字符，然后寻找这俩个字符串中间的字符。 思路：模拟26位进制数表示">
+<meta property="og:description" content="介绍最长上升子序列问题，也就是Longest increasing subsequence，缩写为LIS。是指在一个序列中求长度最长的一个上升子序列的问题，是动态规划中一个相当经典问题。在这里我们可以看到，这个上升实质上就是一个对&amp;lt;进行定义的过程，所以我们求解的其实是一类问题，也就是在给定序列中求解长度最长的符合某一性质的子序列的问题。 解法一状态设计：F[i]代表以A[i]结尾的LIS的长">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T06:33:44.318Z">
+<meta property="og:updated_time" content="2019-04-18T07:41:36.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Median String">
-<meta name="twitter:description" content="Codeforces Round #550 (Div. 3)E. Median String 题意：输入一个n表示一个字符串里面有几个字符，然后寻找这俩个字符串中间的字符。 思路：模拟26位进制数表示">
+<meta name="twitter:title" content="Devil Zoey的博客">
+<meta name="twitter:description" content="介绍最长上升子序列问题，也就是Longest increasing subsequence，缩写为LIS。是指在一个序列中求长度最长的一个上升子序列的问题，是动态规划中一个相当经典问题。在这里我们可以看到，这个上升实质上就是一个对&amp;lt;进行定义的过程，所以我们求解的其实是一类问题，也就是在给定序列中求解长度最长的符合某一性质的子序列的问题。 解法一状态设计：F[i]代表以A[i]结尾的LIS的长">
 
 
 
@@ -122,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="http://wgw8875075.github.io/2019/04/15/模拟拟-中等字符/">
+  <link rel="canonical" href="http://wgw8875075.github.io/2019/04/18/最长上升子序列(LIS)/">
 
 
 
@@ -132,7 +131,7 @@
   };
 </script>
 
-  <title>Median String | Devil Zoey的博客</title>
+  <title> | Devil Zoey的博客</title>
   
 
 
@@ -406,7 +405,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wgw8875075.github.io/2019/04/15/模拟拟-中等字符/">
+    <link itemprop="mainEntityOfPage" href="http://wgw8875075.github.io/2019/04/18/最长上升子序列(LIS)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Devil Zoey">
@@ -423,7 +422,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Median String
+          <h1 class="post-title" itemprop="name headline">
 
               
             
@@ -449,46 +448,16 @@
                 
               
 
-              <time title="创建时间：2019-04-15 22:11:36" itemprop="dateCreated datePublished" datetime="2019-04-15T22:11:36+08:00">2019-04-15</time>
+              <time title="创建时间：2019-04-18 15:39:54 / 修改时间：15:41:36" itemprop="dateCreated datePublished" datetime="2019-04-18T15:39:54+08:00">2019-04-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-18 14:33:44" itemprop="dateModified" datetime="2019-04-18T14:33:44+08:00">2019-04-18</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/模拟/" itemprop="url" rel="index"><span itemprop="name">模拟</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -518,10 +487,17 @@
       
 
       
-        <p><a href="https://codeforces.com/contest/1144/problem/E" target="_blank" rel="noopener">Codeforces Round #550 (Div. 3)E. Median String</a></p>
-<h4 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h4><p>输入一个n表示一个字符串里面有几个字符，然后寻找这俩个字符串中间的字符。</p>
-<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>模拟26位进制数表示<br><a id="more"></a></p>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">const</span> int maxn=<span class="number">2e5</span>+<span class="number">10</span>;</span><br><span class="line">int ans[maxn];</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    string a,b;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    <span class="keyword">for</span>(int i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        ans[i]=a[i]-<span class="string">'a'</span>+b[i]-<span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">if</span>(ans[i]&amp;<span class="number">1</span>)&#123;</span><br><span class="line">            ans[i+<span class="number">1</span>]+=<span class="number">13</span>;</span><br><span class="line">            ans[i]=ans[i]<span class="number">-1</span>&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            ans[i]+=ans[i+<span class="number">1</span>]/<span class="number">26</span>;</span><br><span class="line">            ans[i+<span class="number">1</span>]%=<span class="number">26</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            ans[i]&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;n;i++) printf(<span class="string">"%c"</span>,<span class="string">'a'</span>+ans[i]);</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>最长上升子序列问题，也就是Longest increasing subsequence，缩写为LIS。是指在一个序列中求长度最长的一个上升子序列的问题，是动态规划中一个相当经典问题。在这里我们可以看到，这个上升实质上就是一个对&lt;进行定义的过程，所以我们求解的其实是一类问题，也就是在给定序列中求解长度最长的符合某一性质的子序列的问题。</p>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>状态设计：F[i]代表以A[i]结尾的LIS的长度<br>状态转移：F[i]=max{F[j]+1}(1&lt;=j&lt; i,A[j]&lt; A[i])<br>边界处理：F[i]=1(1&lt;=i&lt;=n)<br>时间复杂度：O(n^2)<br>PS(理解dp最简单的方法：画表，自行推理)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">const</span> int maxn=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line">int a[maxn],dp[maxn];</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">		dp[i]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(int j=<span class="number">1</span>;j&lt;i;j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[j]&lt;a[i]) dp[i]=max(dp[i],dp[j]+<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	int maxx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++) maxx=max(maxx,dp[i]);</span><br><span class="line">	printf(<span class="string">"%d\n"</span>,maxx);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><p>贪心加二分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">const</span> int maxn=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> int INF=<span class="number">0x7f7f7f7f</span>;</span><br><span class="line">int a[maxn],dp[maxn];</span><br><span class="line">int binary_search(int l,int r,int x)&#123;<span class="comment">//二分查找第一个大于等于x的元素</span></span><br><span class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">		int mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(dp[mid]&lt;=x) l=mid+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> r=mid<span class="number">-1</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">		dp[i]=INF;<span class="comment">//初始化为无穷大</span></span><br><span class="line">	&#125;</span><br><span class="line">	int pos=<span class="number">1</span>;</span><br><span class="line">	dp[<span class="number">1</span>]=a[<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&gt;dp[pos]) dp[++pos]=a[i];</span><br><span class="line"><span class="comment">//		else dp[lower_bound(dp+1,dp+pos+1,a[i])-dp]=a[i];</span></span><br><span class="line"><span class="comment">//lower_bound(a,a+n,x)函数 返回从数组a到a+n中第一个&gt;=x的元素地址</span></span><br><span class="line">		<span class="keyword">else</span> dp[binary_search(<span class="number">1</span>,pos,a[i])]=a[i];</span><br><span class="line"><span class="comment">//也可以自己写二分查找。</span></span><br><span class="line">	&#125;</span><br><span class="line">	printf(<span class="string">"%d\n"</span>,pos);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解法三"><a href="#解法三" class="headerlink" title="解法三"></a>解法三</h2><p>用树状数组维护，降低复杂度。<br>PS(我写完后发现这个方法将相等的也计算在其中)。<br>不知道有没有人能去除掉相等，是我太菜了，QWQ.<br>维护每个数的序列也就是第几个数，然后查询其前面的最长上升子序列，然后更新其后的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">const</span> int maxn=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line">int n,dp[maxn];</span><br><span class="line">struct point&#123;</span><br><span class="line">	int x,id;</span><br><span class="line">	bool operator &lt; (<span class="keyword">const</span> point &amp;a) <span class="keyword">const</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x&lt;a.x||(a.x==x&amp;&amp;a.id&gt;id);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">int lowbit(int x)&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;(-x);</span><br><span class="line">&#125;</span><br><span class="line">int query(int x)&#123;</span><br><span class="line">	int sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(x)&#123;</span><br><span class="line">		sum=max(sum,dp[x]);</span><br><span class="line">		x-=lowbit(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> modify(int x,int y)&#123;</span><br><span class="line">	<span class="keyword">while</span>(x&lt;=n)&#123;</span><br><span class="line">		dp[x]=max(dp[x],y);</span><br><span class="line">		x+=lowbit(x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">point a[maxn];</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i].x);</span><br><span class="line">		a[i].id=i;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//	for(int i=1;i&lt;=n;i++) printf("%d %d\n",a[i].x,a[i].id);</span></span><br><span class="line"><span class="comment">//	printf("\n");</span></span><br><span class="line">	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</span><br><span class="line"><span class="comment">//	for(int i=1;i&lt;=n;i++) printf("%d %d\n",a[i].x,a[i].id);</span></span><br><span class="line">	int ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		int maxx=query(a[i].id);</span><br><span class="line">		modify(a[i].id,++maxx);</span><br><span class="line">		ans=max(ans,maxx);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解法四"><a href="#解法四" class="headerlink" title="解法四"></a>解法四</h2><p>随后我查了相关的博客后，发现换个思维就可以排除相等的情况。<br>即维护每一个刚输入的值，查询其前面的最长的上升子序列。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">const</span> int maxn=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line">int n,dp[maxn];</span><br><span class="line">int lowbit(int x)&#123;</span><br><span class="line">	<span class="keyword">return</span> x&amp;(-x);</span><br><span class="line">&#125;</span><br><span class="line">int query(int x)&#123;</span><br><span class="line">	int sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(x)&#123;</span><br><span class="line">		sum=max(sum,dp[x]);</span><br><span class="line">		x-=lowbit(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> modify(int x,int y)&#123;</span><br><span class="line">	<span class="keyword">while</span>(x&lt;=maxn)&#123;</span><br><span class="line">		dp[x]=max(dp[x],y);</span><br><span class="line">		x+=lowbit(x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	int ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		int x;</span><br><span class="line">		scanf(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">		x++;<span class="comment">//因为树状数组从1开始，每次查询x-1以及前面的最大值</span></span><br><span class="line">		int maxx=query(x<span class="number">-1</span>)+<span class="number">1</span>;</span><br><span class="line">		ans=max(ans,maxx);</span><br><span class="line">		modify(x,maxx);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不过解法三和四都有一定的局限性，只能所有数都是&gt;=1的正整数时才能用，不过这种思维可以用在好多地方。<br>如果存在负数的情况，用方法二是最好的。</p>
+
       
     </div>
 
@@ -541,12 +517,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/模拟/" rel="tag"><i class="fa fa-tag"> 模拟</i></a>
-          
-        </div>
       
 
       
@@ -569,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/14/概率dp/" rel="next" title="hdu4576 Robot">
-                <i class="fa fa-chevron-left"></i> hdu4576 Robot
+              <a href="/2019/04/18/sumdiv/" rel="next" title="poj1845sumdiv">
+                <i class="fa fa-chevron-left"></i> poj1845sumdiv
               </a>
             
           </div>
@@ -578,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/16/P1091合唱队形/" rel="prev" title="P1091合唱队形">
-                P1091合唱队形 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -776,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意："><span class="nav-number">1.</span> <span class="nav-text">题意：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#思路："><span class="nav-number"></span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number"></span> <span class="nav-text">代码：</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法一"><span class="nav-number">2.</span> <span class="nav-text">解法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法二"><span class="nav-number">3.</span> <span class="nav-text">解法二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法三"><span class="nav-number">4.</span> <span class="nav-text">解法三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法四"><span class="nav-number">5.</span> <span class="nav-text">解法四</span></a></li></ol></div>
             
 
           </div>
