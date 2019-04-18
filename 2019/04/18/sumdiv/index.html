@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
+  <meta name="description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1*p_2^c2*……*p_n^cn​    然后  A^B可以写成p_1^c1^B*p_2^c2*B*……*p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 <meta name="keywords" content="数论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sumdiv">
+<meta property="og:title" content="poj1845sumdiv">
 <meta property="og:url" content="http://wgw8875075.github.io/2019/04/18/sumdiv/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
+<meta property="og:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1*p_2^c2*……*p_n^cn​    然后  A^B可以写成p_1^c1^B*p_2^c2*B*……*p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T07:26:52.992Z">
+<meta property="og:updated_time" content="2019-04-18T07:32:29.379Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sumdiv">
-<meta name="twitter:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
+<meta name="twitter:title" content="poj1845sumdiv">
+<meta name="twitter:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1*p_2^c2*……*p_n^cn​    然后  A^B可以写成p_1^c1^B*p_2^c2*B*……*p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 
 
 
@@ -132,7 +132,7 @@
   };
 </script>
 
-  <title>sumdiv | Devil Zoey的博客</title>
+  <title>poj1845sumdiv | Devil Zoey的博客</title>
   
 
 
@@ -423,7 +423,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sumdiv
+          <h1 class="post-title" itemprop="name headline">poj1845sumdiv
 
               
             
@@ -449,7 +449,7 @@
                 
               
 
-              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:26:52" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
+              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:32:29" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
             
 
             
@@ -510,9 +510,9 @@
 <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>求$A^B$的所有约束之和mod9901.</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>​    A可以写成</p>
 <script type="math/tex; mode=display">
-p_1^c1+p_2^c2+……+p_n^cn</script><p>​    然后</p>
+p_1^c1*p_2^c2*……*p_n^cn</script><p>​    然后</p>
 <script type="math/tex; mode=display">
-A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B</script><script type="math/tex; mode=display">
+A^B可以写成p_1^c1^B*p_2^c2*B*……*p_n^cn*^B</script><script type="math/tex; mode=display">
 然后A^B的约数可以写成</script><script type="math/tex; mode=display">
 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*……
 *(1+p_n+p_n^2+……+p_n^cn*^B)</script><p>而等比数列的公式可以写成</p>
