@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Devil Zoey的博客">
 <meta property="og:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+…… +(1+p_n+p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T07:17:21.685Z">
+<meta property="og:updated_time" content="2019-04-18T07:20:40.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sumdiv">
 <meta name="twitter:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+…… +(1+p_n+p">
@@ -449,7 +449,7 @@
                 
               
 
-              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:17:21" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
+              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:20:40" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
             
 
             
@@ -1309,6 +1309,46 @@ A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B</script><script type="math/tex
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
