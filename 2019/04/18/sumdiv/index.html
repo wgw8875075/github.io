@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+…… +(1+p_n+p">
+  <meta name="description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 <meta name="keywords" content="数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sumdiv">
 <meta property="og:url" content="http://wgw8875075.github.io/2019/04/18/sumdiv/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+…… +(1+p_n+p">
+<meta property="og:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-18T07:20:40.131Z">
+<meta property="og:updated_time" content="2019-04-18T07:26:52.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sumdiv">
-<meta name="twitter:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+…… +(1+p_n+p">
+<meta name="twitter:description" content="poj1845 sumdiv 题意求$A^B$的所有约束之和mod9901. 思路​    A可以写成  p_1^c1+p_2^c2+……+p_n^cn​    然后  A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B 然后A^B的约数可以写成 (1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*…… *(1+p_n+p">
 
 
 
@@ -449,7 +449,7 @@
                 
               
 
-              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:20:40" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
+              <time title="创建时间：2019-04-18 14:40:02 / 修改时间：15:26:52" itemprop="dateCreated datePublished" datetime="2019-04-18T14:40:02+08:00">2019-04-18</time>
             
 
             
@@ -514,8 +514,8 @@ p_1^c1+p_2^c2+……+p_n^cn</script><p>​    然后</p>
 <script type="math/tex; mode=display">
 A^B可以写成p_1^c1^B+p_2^c2*B+……+p_n^cn*^B</script><script type="math/tex; mode=display">
 然后A^B的约数可以写成</script><script type="math/tex; mode=display">
-(1+p_1+p_1^2+……+p_1^c1^B)+(1+p_2+p_2^2+……+p_2^c2*B)+……
-+(1+p_n+p_n^2+……+p_n^cn*^B)</script><p>而等比数列的公式可以写成</p>
+(1+p_1+p_1^2+……+p_1^c1^B)*(1+p_2+p_2^2+……+p_2^c2*B)*……
+*(1+p_n+p_n^2+……+p_n^cn*^B)</script><p>而等比数列的公式可以写成</p>
 <script type="math/tex; mode=display">
 (p_1^b*^c_1+1)/(p_1+1)</script><script type="math/tex; mode=display">
 (p_1-1)不是9901的倍数时可以用逆元求出但当(p_1-1)是9901的倍数时，无法求逆元</script><script type="math/tex; mode=display">
