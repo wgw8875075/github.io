@@ -5,10 +5,12 @@
     <url>%2F2019%2F05%2F08%2FHDU524%2F</url>
     <content type="text"><![CDATA[HDU5242 题意​ 一棵树有n个结点，n-1条边，每个结点有个权值。每次可以获得从根节点走到叶子结点所有结点的权值和，但是每个结点的权值只能使用一次。求走k次所能获得的最大权值和。 思路​ 先进行第一次dfs，求出每条从根到叶子节点的链，然后将这些链排序，在进行第二遍dfs,求出抛去重复走的路径，在一次对所求的结果进行排序，取前m大加起来就行。 代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=1e5+10;typedef long long ll;int n,m;int head[maxn],ver[maxn],nex[maxn];int tot,p;int w[maxn];int visit[maxn],fa[maxn];ll ans[maxn];struct point&#123; ll x,y;&#125;a[maxn];bool cmp(point a,point b)&#123; return a.y&gt;b.y;&#125;void add(int u,int v)&#123; ver[++tot]=v,nex[tot]=head[u],head[u]=tot;&#125;void init()&#123; memset(head,0,sizeof head); memset(visit,0,sizeof visit); tot=0; p=0;&#125;void dfs(ll now,ll val)&#123; if(head[now])&#123; for(int i=head[now];i;i=nex[i])&#123; int y=ver[i]; dfs(y,val+w[now]); &#125; &#125; else &#123; a[++p].x=now,a[p].y=val+w[now]; &#125;&#125;ll dfs1(ll now)&#123; if(visit[now]) return 0; visit[now]=1; return dfs1(fa[now])+w[now];&#125;int main()&#123; int t; cin&gt;&gt;t; int id=0; while(t--)&#123; init(); scanf("%d%d",&amp;n,&amp;m); for(int i=1;i&lt;=n;i++) fa[i]=i; for(int i=1;i&lt;=n;i++) scanf("%d",&amp;w[i]); for(int i=1;i&lt;=n-1;i++)&#123; int u,v; scanf("%d%d",&amp;u,&amp;v); add(u,v); fa[v]=u; &#125; dfs(1,0); sort(a+1,a+p+1,cmp); for(int i=1;i&lt;=n;i++)&#123; ans[i]=dfs1(a[i].x); &#125; sort(ans+1,ans+p+1,greater&lt;ll&gt;()); ll res=0; for(int i=1;i&lt;=m;i++)&#123; res+=ans[i]; &#125; printf("Case #%d: %lld\n",++id,res); &#125; //system("pause");&#125;]]></content>
       <categories>
-        <category>树链剖分</category>
+        <category>贪心</category>
+        <category>dfs</category>
       </categories>
       <tags>
-        <tag>树链剖分</tag>
+        <tag>贪心</tag>
+        <tag>dfs</tag>
       </tags>
   </entry>
   <entry>
