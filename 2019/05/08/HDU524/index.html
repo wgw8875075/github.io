@@ -103,16 +103,18 @@
 
 
 
-  <meta name="description" content="成功是优点的发挥，失败，是缺点的积累。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Devil Zoey的博客">
-<meta property="og:url" content="http://wgw8875075.github.io/categories/RMQ/index.html">
+  <meta name="description" content="HDU5242 题意​    一棵树有n个结点，n-1条边，每个结点有个权值。每次可以获得从根节点走到叶子结点所有结点的权值和，但是每个结点的权值只能使用一次。求走k次所能获得的最大权值和。 思路​    先进行第一次dfs，求出每条从根到叶子节点的链，然后将这些链排序，在进行第二遍dfs,求出抛去重复走的路径，在一次对所求的结果进行排序，取前m大加起来就行。 代码1234567891011121">
+<meta name="keywords" content="树链剖分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU5242">
+<meta property="og:url" content="http://wgw8875075.github.io/2019/05/08/HDU524/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="成功是优点的发挥，失败，是缺点的积累。">
+<meta property="og:description" content="HDU5242 题意​    一棵树有n个结点，n-1条边，每个结点有个权值。每次可以获得从根节点走到叶子结点所有结点的权值和，但是每个结点的权值只能使用一次。求走k次所能获得的最大权值和。 思路​    先进行第一次dfs，求出每条从根到叶子节点的链，然后将这些链排序，在进行第二遍dfs,求出抛去重复走的路径，在一次对所求的结果进行排序，取前m大加起来就行。 代码1234567891011121">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-08T03:51:21.466Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Devil Zoey的博客">
-<meta name="twitter:description" content="成功是优点的发挥，失败，是缺点的积累。">
+<meta name="twitter:title" content="HDU5242">
+<meta name="twitter:description" content="HDU5242 题意​    一棵树有n个结点，n-1条边，每个结点有个权值。每次可以获得从根节点走到叶子结点所有结点的权值和，但是每个结点的权值只能使用一次。求走k次所能获得的最大权值和。 思路​    先进行第一次dfs，求出每条从根到叶子节点的链，然后将这些链排序，在进行第二遍dfs,求出抛去重复走的路径，在一次对所求的结果进行排序，取前m大加起来就行。 代码1234567891011121">
 
 
 
@@ -120,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://wgw8875075.github.io/categories/RMQ/">
+  <link rel="canonical" href="http://wgw8875075.github.io/2019/05/08/HDU524/">
 
 
 
@@ -130,7 +132,7 @@
   };
 </script>
 
-  <title>分类: RMQ | Devil Zoey的博客</title>
+  <title>HDU5242 | Devil Zoey的博客</title>
   
 
 
@@ -178,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,7 +275,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -384,86 +386,244 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>RMQ<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wgw8875075.github.io/2019/05/08/HDU524/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Devil Zoey">
+      <meta itemprop="description" content="成功是优点的发挥，失败，是缺点的积累。">
+      <meta itemprop="image" content="/images/bolg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Devil Zoey的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/22/ST算法/" itemprop="url">
-            
-              <span itemprop="name">ST算法</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">HDU5242
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-22T09:33:45+08:00" content="2019-04-22">
-          04-22
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-08 11:42:09 / 修改时间：11:51:21" itemprop="dateCreated datePublished" datetime="2019-05-08T11:42:09+08:00">2019-05-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/树链剖分/" itemprop="url" rel="index"><span itemprop="name">树链剖分</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5242" target="_blank" rel="noopener">HDU5242</a></p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>​    一棵树有n个结点，n-1条边，每个结点有个权值。每次可以获得从根节点走到叶子结点所有结点的权值和，但是每个结点的权值只能使用一次。求走k次所能获得的最大权值和。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>​    先进行第一次dfs，求出每条从根到叶子节点的链，然后将这些链排序，在进行第二遍dfs,求出抛去重复走的路径，在一次对所求的结果进行排序，取前m大加起来就行。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> head[maxn],ver[maxn],nex[maxn];</span><br><span class="line"><span class="keyword">int</span> tot,p;</span><br><span class="line"><span class="keyword">int</span> w[maxn];</span><br><span class="line"><span class="keyword">int</span> visit[maxn],fa[maxn];</span><br><span class="line">ll ans[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">point</span>&#123;</span></span><br><span class="line">    ll x,y;</span><br><span class="line">&#125;a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(point a,point b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.y&gt;b.y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">    ver[++tot]=v,nex[tot]=head[u],head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(head,<span class="number">0</span>,<span class="keyword">sizeof</span> head);</span><br><span class="line">    <span class="built_in">memset</span>(visit,<span class="number">0</span>,<span class="keyword">sizeof</span> visit);</span><br><span class="line">    tot=<span class="number">0</span>;</span><br><span class="line">    p=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(ll now,ll val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head[now])&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[now];i;i=nex[i])&#123;</span><br><span class="line">            <span class="keyword">int</span> y=ver[i];</span><br><span class="line">            dfs(y,val+w[now]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        a[++p].x=now,a[p].y=val+w[now];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">dfs1</span><span class="params">(ll now)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(visit[now]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    visit[now]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> dfs1(fa[now])+w[now];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">int</span> id=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        init();</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) fa[i]=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;w[i]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> u,v;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</span><br><span class="line">            add(u,v);</span><br><span class="line">            fa[v]=u;</span><br><span class="line">        &#125;</span><br><span class="line">        dfs(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">        sort(a+<span class="number">1</span>,a+p+<span class="number">1</span>,cmp);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            ans[i]=dfs1(a[i].x);</span><br><span class="line">        &#125;</span><br><span class="line">        sort(ans+<span class="number">1</span>,ans+p+<span class="number">1</span>,greater&lt;ll&gt;());</span><br><span class="line">        ll res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">            res+=ans[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d: %lld\n"</span>,++id,res);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//system("pause");</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.png" alt="Devil Zoey 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/aipay.png" alt="Devil Zoey 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/树链剖分/" rel="tag"><i class="fa fa-tag"> 树链剖分</i></a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/08/ZOJ4092/" rel="next" title="ZOJ4092">
+                <i class="fa fa-chevron-left"></i> ZOJ4092
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -483,8 +643,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -630,6 +799,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -785,6 +971,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -803,6 +993,8 @@
 
   
 
+
+  
 
 
   
@@ -1169,6 +1361,25 @@
   
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: ,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 
