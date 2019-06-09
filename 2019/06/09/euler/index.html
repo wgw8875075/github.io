@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Devil Zoey的博客">
 <meta property="og:description" content="Project Euler Problem 51 Prime digit replacements题意​    将两位数*3的第一个数字代换为任意数字，在九个可能值中有六个是素数：13、23、43、53、73和83。 ​    将五位数56**3的第三和第四位数字代换为相同的任意数字，就得到了十个可能值中有七个是素数的最小例子，这个素数族是：56003、56113、56333、56443、5666">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-09T01:21:30.340Z">
+<meta property="og:updated_time" content="2019-06-09T03:33:40.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Project Euler Problem 51">
 <meta name="twitter:description" content="Project Euler Problem 51 Prime digit replacements题意​    将两位数*3的第一个数字代换为任意数字，在九个可能值中有六个是素数：13、23、43、53、73和83。 ​    将五位数56**3的第三和第四位数字代换为相同的任意数字，就得到了十个可能值中有七个是素数的最小例子，这个素数族是：56003、56113、56333、56443、5666">
@@ -449,7 +449,7 @@
                 
               
 
-              <time title="创建时间：2019-06-09 09:00:30 / 修改时间：09:21:30" itemprop="dateCreated datePublished" datetime="2019-06-09T09:00:30+08:00">2019-06-09</time>
+              <time title="创建时间：2019-06-09 09:00:30 / 修改时间：11:33:40" itemprop="dateCreated datePublished" datetime="2019-06-09T09:00:30+08:00">2019-06-09</time>
             
 
             
@@ -509,6 +509,7 @@
         <h1 id="Project-Euler-Problem-51-Prime-digit-replacements"><a href="#Project-Euler-Problem-51-Prime-digit-replacements" class="headerlink" title="Project Euler Problem 51 Prime digit replacements"></a><a href="https://projecteuler.net/problem=51" target="_blank" rel="noopener">Project Euler Problem 51 Prime digit replacements</a></h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>​    将两位数*3的第一个数字代换为任意数字，在九个可能值中有六个是素数：13、23、43、53、73和83。</p>
 <p>​    将五位数56**3的第三和第四位数字代换为相同的任意数字，就得到了十个可能值中有七个是素数的最小例子，这个素数族是：56003、56113、56333、56443、56663、56773和56993。56003作为这一族中最小的成员，也是最小的满足这个性质的素数。</p>
 <p>​    通过将部分数字（不一定相邻）代换为相同的任意数字，有时能够得到八个素数，求满足这一性质的最小素数。</p>
+<p>答案是<code>*2*3*3</code></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>​    (1)先打个素数表</p>
 <p>​    (2)对每个素数进行位数计算(计算有几位)，然后枚举换哪一位（我用二进制下进行枚举，个位不能进行枚举，枚举个位的话有一般都是偶数，所有从十位开始枚举）</p>
 <p>​    (3)用set存数最后计算set的大小是否等于8，输出结果。</p>
