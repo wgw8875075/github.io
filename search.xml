@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[判断一颗树是否有环]]></title>
+    <url>%2F2019%2F06%2F19%2F%E5%88%A4%E6%96%AD%E4%B8%80%E9%A2%97%E6%A0%91%E6%98%AF%E5%90%A6%E6%9C%89%E7%8E%AF%2F</url>
+    <content type="text"><![CDATA[判断一个树是否有环123456789101112131415161718192021222324252627282930313233343536373839#include&lt;bits/stdc++.h&gt;using namespace std;int flag=1;int v[100];int head[100],ver[100&lt;&lt;1],nex[100&lt;&lt;1];int tot;void add(int x,int y)&#123; ver[++tot]=y,nex[tot]=head[x],head[x]=tot;&#125;bool dfs(int now,int fa)&#123; // printf("now=%d\n",now); v[now]=1; for(int i=head[now];i;i=nex[i])&#123; int y=ver[i]; // printf("y=%d\n",y); // printf("%d %d\n",now,y); if(y==fa) continue; else &#123; // printf("%d %d\n",now,y); if(v[y]) return 1; if(dfs(y,now)) return 1; &#125; &#125; return 0;&#125;int main()&#123; int n,m; cin&gt;&gt;n&gt;&gt;m; for(int i=1;i&lt;=m;i++)&#123; int x,y; cin&gt;&gt;x&gt;&gt;y; add(x,y); add(y,x); &#125; if(dfs(1,0)) printf("you\n"); else printf("wu\n"); for(int i=1;i&lt;=n;i++) printf("%d",v[i]); //system("pause");&#125;]]></content>
+      <categories>
+        <category>倍增</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[倍增题]]></title>
     <url>%2F2019%2F06%2F16%2F%E5%80%8D%E5%A2%9E%2F</url>
     <content type="text"><![CDATA[牛客 区间的连续段题意​ 给你一个长为n的序列a和一个常数k ，有m次询问，每次查询一个区间[l,r]内所有数最少分成多少个连续段，使得每段的和都 &lt;= k ，如果这一次查询无解，输出”Chtholly”。 思路​ 求前缀和，然后先预处理出走一步所能到达得最远的位置，然后用dp[i][j]表示从i点出发分成1&lt;&lt;j段的最远所到达的位置 代码123456789101112131415161718192021222324252627282930313233343536373839#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=1e6+10;long long a[maxn];int dp[maxn][37];int main()&#123; int n,k,m; scanf("%d%d%d",&amp;n,&amp;m,&amp;k); for(int i=1;i&lt;=n;i++) &#123; scanf("%lld",&amp;a[i]); a[i]+=a[i-1]; &#125; a[n+1]=a[n]+k; for(int i=1;i&lt;=n;i++)&#123; int p=lower_bound(a+1,a+n+1,a[i-1]+k+1)-a; dp[i][0]=p; &#125; for(int i=0;i&lt;=31;i++) dp[n+1][i]=n+1; for(int j=1;j&lt;=31;j++)&#123; for(int i=1;i&lt;=n;i++)&#123; dp[i][j]=dp[dp[i][j-1]][j-1]; &#125; &#125; while(m--)&#123; int l,r; scanf("%d%d",&amp;l,&amp;r); int ans=0; for(int i=31;i&gt;=0;i--)&#123; if(dp[l][i]&lt;=r)&#123; l=dp[l][i]; ans+=(1&lt;&lt;i); &#125; &#125; if(dp[l][0]&lt;=r) printf("Chtholly\n"); else printf("%d\n",ans+1); &#125; //system("pause");&#125; Educational Codeforces Round 66 (Rated for Div. 2)题意​ 求覆盖目标区域至少需要多少个区间 思路​ dp[i][j]表示从i点出发需要最少需要1&lt;&lt;j的区间覆盖。 代码12345678910111213141516171819202122232425262728293031323334353637383940414243#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=5e5+10;int a[maxn];int dp[maxn][33];int main()&#123; int n,m; scanf("%d%d",&amp;n,&amp;m); for(int i=1;i&lt;=n;i++)&#123; int l,r; scanf("%d%d",&amp;l,&amp;r); dp[l][0]=max(dp[l][0],r); &#125; for(int i=1;i&lt;maxn;i++) dp[i][0]=max(&#123;dp[i-1][0],dp[i][0]&#125;); for(int j=1;j&lt;=31;j++)&#123; for(int i=0;i&lt;maxn;i++)&#123; dp[i][j]=dp[dp[i][j-1]][j-1]; &#125; &#125; for(int i=0;i&lt;5;i++)&#123; for(int j=0;j&lt;5;j++)&#123; printf("%d ",dp[i][j]); &#125; puts(""); &#125; while(m--)&#123; int l,r; scanf("%d%d",&amp;l,&amp;r); int ans=0; if(dp[l][31]&lt;r)&#123; printf("-1\n"); continue; &#125; for(int i=31;i&gt;=0;i--)&#123; if(dp[l][i]&lt;r)&#123; ans+=(1&lt;&lt;i); l=dp[l][i]; &#125; &#125; printf("%d\n",ans+1); &#125; //system("pause");&#125;]]></content>
