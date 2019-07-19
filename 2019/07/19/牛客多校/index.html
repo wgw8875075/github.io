@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="感谢老陈的翻译 B. Integration题目大意 \begin{align} &amp; 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值.假设结果为\frac{p}{q},输出p \cdot">
+  <meta name="description" content="感谢老陈的翻译 B. Integration题目大意 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值. 假设结果为\frac{p}{q},输出p \cdot q^{-1}.思路先把所给公">
 <meta name="keywords" content="多校">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019牛客多校第一场">
 <meta property="og:url" content="http://wgw8875075.github.io/2019/07/19/牛客多校/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="感谢老陈的翻译 B. Integration题目大意 \begin{align} &amp; 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值.假设结果为\frac{p}{q},输出p \cdot">
+<meta property="og:description" content="感谢老陈的翻译 B. Integration题目大意 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值. 假设结果为\frac{p}{q},输出p \cdot q^{-1}.思路先把所给公">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-19T14:00:11.253Z">
+<meta property="og:updated_time" content="2019-07-19T14:19:41.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019牛客多校第一场">
-<meta name="twitter:description" content="感谢老陈的翻译 B. Integration题目大意 \begin{align} &amp; 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值.假设结果为\frac{p}{q},输出p \cdot">
+<meta name="twitter:description" content="感谢老陈的翻译 B. Integration题目大意 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值. 假设结果为\frac{p}{q},输出p \cdot q^{-1}.思路先把所给公">
 
 
 
@@ -468,7 +468,7 @@
                 
               
 
-              <time title="创建时间：2019-07-19 18:46:09 / 修改时间：22:00:11" itemprop="dateCreated datePublished" datetime="2019-07-19T18:46:09+08:00">2019-07-19</time>
+              <time title="创建时间：2019-07-19 18:46:09 / 修改时间：22:19:41" itemprop="dateCreated datePublished" datetime="2019-07-19T18:46:09+08:00">2019-07-19</time>
             
 
             
@@ -527,7 +527,8 @@
       
         <p><a href="https://fzchen.top/2019/07/18/2019%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%E7%AC%AC%E4%B8%80%E5%9C%BA/" target="_blank" rel="noopener">感谢老陈的翻译</a></p>
 <h1 id="B-Integration"><a href="#B-Integration" class="headerlink" title="B. Integration"></a>B. Integration</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><script type="math/tex; mode=display">
-\begin{align} & 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值.假设结果为\frac{p}{q},输出p \cdot q^{-1}.\end{align}</script><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先把所给公式分母下面的公式拿出来化简</p>
+已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值.
+假设结果为\frac{p}{q},输出p \cdot q^{-1}.</script><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先把所给公式分母下面的公式拿出来化简</p>
 <script type="math/tex; mode=display">
 \frac{1}{\prod_{i=1}^{n}\left( a_{i}^2+x^2\right )}</script><script type="math/tex; mode=display">
 \begin{align}&\frac{1}{\prod_{i=1}^{n}\left( a_{i}^2+x^2\right )}\\ =&\frac{1}{\left(a_1^2+x^2\right) \left(a_2^2+x^2\right) }\times \frac{1}{\prod_{i=3}^{n}\left( a_{i}^2+x^2\right )} \\ =& \frac{1}{ a_2^2-a_1^2 }\times \left( \frac{1}{a_1^2+x^2}- \frac{1}{a_2^2+x^2 }\right)\times \frac{1} {\prod_{i=3}^{n}\left( a_{i}^2+x^2 \right)}\\ =& \frac{1}{ a_2^2-a_1^2 }\times \left( \frac{1}{a_1^2+x^2}\times\frac{1}{a_3^2+x^2}- \frac{1}{a_2^2+x^2 }\times\frac{1}{a_3^2+x^2}\right)\times \frac{1} {\prod_{i=4}^{n}\left( a_{i}^2+x^2 \right)}\\ =& \left(\frac{1}{(a_2^2-a_1^2)(a_3^2-a_1^2)}\frac{1}{(a_1^2+x^2)}+\frac{1}{(a_1^2-a_2^2)(a_3^2-a_2^2)}\frac{1}{(a_2^2+x^2)}+\frac{1}{(a_1^2-a_3^2)(a_2^2-a_3^2)}\frac{1}{(a_3^2+x^2)} \right )\times \frac{1} {\prod_{i=4}^{n}\left( a_{i}^2+x^2 \right)}  \end{align}</script><p>然后总结公式继续化简</p>
