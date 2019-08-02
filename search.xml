@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛客多校第五场]]></title>
+    <url>%2F2019%2F08%2F02%2F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%E7%AC%AC%E5%9B%9B%E5%9C%BA%2F</url>
+    <content type="text"><![CDATA[A digits 2B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n]]></content>
+      <categories>
+        <category>牛客多校</category>
+      </categories>
+      <tags>
+        <tag>牛客多校</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1100F-Ivan and Burgers]]></title>
+    <url>%2F2019%2F08%2F02%2F%E7%BA%BF%E6%80%A7%E5%9F%BA%2F</url>
+    <content type="text"><![CDATA[F. Ivan and Burgers 题意​ 给出n个整数,有q次查询,每次查询给出l,r,问l,r内区间的最大异或和. 思路 线性基,在线或者离线 代码离线线性基的代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=5e5+10;int a[maxn],ans[maxn];struct P&#123; int l,r,id; bool operator &lt; (P b)&#123; return r&lt;b.r; &#125;&#125; p[maxn];int pos[21],line[21];void add(int x,int id)&#123; for(int i=20;i&gt;=0;i--)&#123; if(x&amp;(1&lt;&lt;i))&#123; if(!line[i]) &#123; line[i]=x,pos[i]=id; break; &#125; if(pos[i]&lt;id) swap(line[i],x),swap(pos[i],id); x^=line[i]; &#125; &#125;&#125;int query(int id)&#123; int res=0; for(int i=20;i&gt;=0;i--)&#123; if(pos[i]&gt;=id&amp;&amp;(res^line[i])&gt;res) res^=line[i]; &#125; return res;&#125;int main()&#123; int n; cin&gt;&gt;n; for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i]; int q; cin&gt;&gt;q; for(int i=1;i&lt;=q;i++)&#123; cin&gt;&gt;p[i].l&gt;&gt;p[i].r; p[i].id=i; &#125; sort(p+1,p+q+1); int l=1; for(int i=1;i&lt;=q;i++)&#123; while(l&lt;=p[i].r&amp;&amp;l&lt;=n) add(a[l],l),l++; ans[p[i].id]=query(p[i].l); &#125; for(int i=1;i&lt;=q;i++) printf("%d\n",ans[i]); //system("pause"); return 0;&#125; 在线线性基的代码: 123456789101112131415161718192021222324252627282930313233343536373839404142#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=5e5+10;int a[maxn],pos[maxn][21],line[maxn][21];struct P&#123; int l,r,id;&#125;p[maxn];int n;void init()&#123; for(int i=1;i&lt;=n;i++)&#123; for(int j=0;j&lt;=20;j++) line[i][j]=line[i-1][j],pos[i][j]=pos[i-1][j]; int id=i; for(int j=20;j&gt;=0;j--)&#123; if(a[i]&amp;(1&lt;&lt;j))&#123; if(!line[i][j]) &#123; line[i][j]=a[i]; pos[i][j]=id; break; &#125; if(pos[i][j]&lt;id) swap(line[i][j],a[i]),swap(pos[i][j],id); a[i]^=line[i][j]; &#125; &#125; &#125;&#125;int main()&#123; cin&gt;&gt;n; for(int i=1;i&lt;=n;i++) scanf("%d",&amp;a[i]); init(); int q; scanf("%d",&amp;q); for(int i=1;i&lt;=q;i++)&#123; int l,r; scanf("%d%d",&amp;l,&amp;r); int res=0; for(int j=20;j&gt;=0;j--) if(pos[r][j]&gt;=l&amp;&amp;(res^line[r][j])&gt;res) res^=line[r][j]; printf("%d\n",res); &#125; //system("pause");&#125;]]></content>
+      <categories>
+        <category>线性基</category>
+      </categories>
+      <tags>
+        <tag>线性基</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019牛客多校第一场]]></title>
     <url>%2F2019%2F07%2F19%2F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%2F</url>
     <content type="text"><![CDATA[感谢老陈的翻译 B. Integration题目大意 已知\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}.给定数组a,求\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx的值. 假设结果为\frac{p}{q},输出p \cdot q^{-1}.思路先把所给公式分母下面的公式拿出来化简 \frac{1}{\prod_{i=1}^{n}\left( a_{i}^2+x^2\right )} \begin{align}&\frac{1}{\prod_{i=1}^{n}\left( a_{i}^2+x^2\right )}\\ =&\frac{1}{\left(a_1^2+x^2\right) \left(a_2^2+x^2\right) }\times \frac{1}{\prod_{i=3}^{n}\left( a_{i}^2+x^2\right )} \\ =& \frac{1}{ a_2^2-a_1^2 }\times \left( \frac{1}{a_1^2+x^2}- \frac{1}{a_2^2+x^2 }\right)\times \frac{1} {\prod_{i=3}^{n}\left( a_{i}^2+x^2 \right)}\\ =& \frac{1}{ a_2^2-a_1^2 }\times \left( \frac{1}{a_1^2+x^2}\times\frac{1}{a_3^2+x^2}- \frac{1}{a_2^2+x^2 }\times\frac{1}{a_3^2+x^2}\right)\times \frac{1} {\prod_{i=4}^{n}\left( a_{i}^2+x^2 \right)}\\ =& \left(\frac{1}{(a_2^2-a_1^2)(a_3^2-a_1^2)}\frac{1}{(a_1^2+x^2)}+\frac{1}{(a_1^2-a_2^2)(a_3^2-a_2^2)}\frac{1}{(a_2^2+x^2)}+\frac{1}{(a_1^2-a_3^2)(a_2^2-a_3^2)}\frac{1}{(a_3^2+x^2)} \right )\times \frac{1} {\prod_{i=4}^{n}\left( a_{i}^2+x^2 \right)} \end{align}然后总结公式继续化简 \begin{aligned} &\sum\limits_{i=1}^{n}\frac{1}{\prod\limits_{j=1,j\not=i}^{n}(a_j^2-a_i^2)}\int_0^{\infty}\frac{1}{a_i^2+x^2}dx&\\ =&\sum\limits_{i=1}^{n}\frac{1}{\prod\limits_{j=1,j\not=i}^{n}(a_j^2-a_i^2)\times a_i^2}\int_0^{\infty}\frac{1}{1+(\frac{x}{a_i})^2}dx&\\ =&\sum\limits_{i=1}^{n}\frac{1}{\prod\limits_{j=1,j\not=i}^{n}(a_j^2-a_i^2)\times a_i}\int_0^{\infty}\frac{1}{1+(\frac{x}{a_i})^2}d\left(\frac{x}{a_i}\right)\\ = &\sum\limits_{i=1}^{n}\frac{1}{2\times\prod\limits_{j=1,j\not=i}^{n}(a_j^2-a_i^2)\times a_i}\end{aligned}感谢瓜皮大佬hhh 代码1234567891011121314151617181920212223242526272829303132333435#include&lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;const int maxn=1010;const int mod=1e9+7;ll a[maxn];ll quickMod(ll a, ll p, ll mod) &#123; a%=mod; ll base=1; while(p) &#123; if(p&amp;1) base=base*a%mod; a=a*a%mod; p&gt;&gt;=1; &#125; return base;&#125;int main()&#123; int n; while(~scanf("%d",&amp;n))&#123; for(int i=1;i&lt;=n;i++)&#123; scanf("%lld",&amp;a[i]); &#125; ll ans=0; for(int i=1;i&lt;=n;i++)&#123; ll temp=1; for(int j=1;j&lt;=n;j++)&#123; if(i!=j) temp=temp*((a[j]*a[j]%mod-a[i]*a[i]%mod)%mod+mod)%mod; &#125; temp=quickMod(temp,mod-2,mod); temp=temp*quickMod(2*a[i],mod-2,mod)%mod; ans=(ans+temp)%mod; &#125; printf("%lld\n",ans); &#125;&#125;]]></content>
