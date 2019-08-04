@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="A digits 2B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
+  <meta name="description" content="A digits 2签到题 B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
 <meta name="keywords" content="牛客多校">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛客多校第五场">
 <meta property="og:url" content="http://wgw8875075.github.io/2019/08/02/牛客多校第四场/index.html">
 <meta property="og:site_name" content="Devil Zoey的博客">
-<meta property="og:description" content="A digits 2B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
+<meta property="og:description" content="A digits 2签到题 B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-02T08:45:46.245Z">
+<meta property="og:updated_time" content="2019-08-04T07:33:45.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客多校第五场">
-<meta name="twitter:description" content="A digits 2B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
+<meta name="twitter:description" content="A digits 2签到题 B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n">
 
 
 
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">21</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">22</span></a>
 
   </li>
         
@@ -287,7 +287,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">15</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">16</span></a>
 
   </li>
         
@@ -306,7 +306,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">22</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">27</span></a>
 
   </li>
         
@@ -468,12 +468,24 @@
                 
               
 
-              <time title="创建时间：2019-08-02 16:28:52 / 修改时间：16:45:46" itemprop="dateCreated datePublished" datetime="2019-08-02T16:28:52+08:00">2019-08-02</time>
+              <time title="创建时间：2019-08-02 16:28:52" itemprop="dateCreated datePublished" datetime="2019-08-02T16:28:52+08:00">2019-08-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-04 15:33:45" itemprop="dateModified" datetime="2019-08-04T15:33:45+08:00">2019-08-04</time>
               
             
           </span>
@@ -525,7 +537,8 @@
       
 
       
-        <h1 id="A-digits-2"><a href="#A-digits-2" class="headerlink" title="A digits 2"></a><a href="https://ac.nowcoder.com/acm/contest/885/A" target="_blank" rel="noopener">A digits 2</a></h1><h1 id="B-generator-1"><a href="#B-generator-1" class="headerlink" title="B generator 1"></a><a href="https://ac.nowcoder.com/acm/contest/885/B" target="_blank" rel="noopener">B generator 1</a></h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><script type="math/tex; mode=display">
+        <h1 id="A-digits-2"><a href="#A-digits-2" class="headerlink" title="A digits 2"></a><a href="https://ac.nowcoder.com/acm/contest/885/A" target="_blank" rel="noopener">A digits 2</a></h1><p>签到题</p>
+<h1 id="B-generator-1"><a href="#B-generator-1" class="headerlink" title="B generator 1"></a><a href="https://ac.nowcoder.com/acm/contest/885/B" target="_blank" rel="noopener">B generator 1</a></h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><script type="math/tex; mode=display">
 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n<10^{10^6}</script><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><script type="math/tex; mode=display">
 [x_i,x_{i-1}]=[x_{i-1},x_{i-2}]*\left[
 \begin{matrix}
@@ -533,8 +546,11 @@ a & 1  \\
 b & 0  \\
 
 \end{matrix}
-\right] \tag{3}</script><p>构造矩阵,十进制矩阵快速幂,在对每位进行二进制快速幂.</p>
+\right]</script><p>构造矩阵,十进制矩阵快速幂,在对每位进行二进制快速幂.</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e6</span>+<span class="number">20</span>;</span><br><span class="line">ll mod;</span><br><span class="line"><span class="keyword">char</span> n[maxn];</span><br><span class="line"><span class="keyword">int</span> _size;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Matix</span>&#123;</span></span><br><span class="line">    ll m[<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line">    Matix()&#123;</span><br><span class="line">        <span class="built_in">memset</span>(m, <span class="number">0</span>, <span class="keyword">sizeof</span>(m));</span><br><span class="line">    &#125;</span><br><span class="line">    Matix <span class="keyword">operator</span>*(<span class="keyword">const</span> Matix &amp;m2)&#123;</span><br><span class="line">        Matix t;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; _size; ++i) <span class="comment">//不能写小于MAXN</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; _size; ++j)</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; _size; ++k)</span><br><span class="line">                    t.m[i][j] = (t.m[i][j] + m[i][k] * m2.m[k][j]) % mod;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;;</span><br><span class="line">    Matix <span class="keyword">operator</span>^(ll k) &#123;</span><br><span class="line">        Matix x = *<span class="keyword">this</span>, ans;</span><br><span class="line">        ans.m[<span class="number">0</span>][<span class="number">0</span>] = ans.m[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (k) &#123;</span><br><span class="line">            <span class="keyword">if</span> (k&amp;<span class="number">1</span>)</span><br><span class="line">                ans = ans * x;</span><br><span class="line">            x = x * x;</span><br><span class="line">            k &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;g,res;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll x0,x1,a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld"</span>,&amp;x0,&amp;x1,&amp;a,&amp;b);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%lld"</span>,n,&amp;mod);</span><br><span class="line">    _size=<span class="number">2</span>;</span><br><span class="line">    g.m[<span class="number">0</span>][<span class="number">0</span>]=a,g.m[<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>,g.m[<span class="number">1</span>][<span class="number">0</span>]=b,g.m[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(n);</span><br><span class="line">    res.m[<span class="number">0</span>][<span class="number">0</span>]=x1,res.m[<span class="number">0</span>][<span class="number">1</span>]=x0;</span><br><span class="line">	res.m[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">0</span>,res.m[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=len<span class="number">-1</span>;i&gt;=<span class="number">0</span>;--i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n[i]!=<span class="string">'0'</span>)res=res*(g^(n[i]-<span class="string">'0'</span>));</span><br><span class="line">        g=g^<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,res.m[<span class="number">0</span>][<span class="number">1</span>]);</span><br><span class="line">	<span class="comment">//system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-generator-2"><a href="#C-generator-2" class="headerlink" title="C generator 2"></a><a href="https://ac.nowcoder.com/acm/contest/885/C" target="_blank" rel="noopener">C generator 2</a></h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><p>给出n,$x_0$,a,b,p求$x_i=(ax_{i-1}+b)$%p,再给出q次查询,每次给出v,求出最小的下标使得$x_i$=v,s输出下标</p>
+<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>根据$x_i=ax_{i-1}+b$推导除$x_n=a^nx_0+a^{n-1}b+a^{n-2}b+….+ab+b$再根据等比数列合并得 ‘$ a^n=\frac{v*(a-1)+b}{(a-1)x_0+b}$’=v ,下面这部分用逆元求,在用SGBG,形如$a^n$=b(mod p) ,n=i*t-j,t=1e6 ,i=[0,1e3+10],j=[0,1e3+10].在考虑特殊情况a=1,a=0的情况,这道题就解决完成了.</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> mod,t1=<span class="number">1e3</span>,t2=<span class="number">1e6</span>;</span><br><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; Hash;</span><br><span class="line"><span class="function">ll  <span class="title">ksm</span><span class="params">(ll a, ll p, ll mod)</span> </span>&#123;</span><br><span class="line">	a%=mod;</span><br><span class="line">    ll base=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(p) &#123;</span><br><span class="line">        <span class="keyword">if</span>(p&amp;<span class="number">1</span>) base=base*a%mod;</span><br><span class="line">        a=a*a%mod; </span><br><span class="line">		p&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> base;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> _;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;_);</span><br><span class="line">	<span class="keyword">while</span>(_--)&#123;</span><br><span class="line">		Hash.clear();</span><br><span class="line">		ll n,x0,a,b;</span><br><span class="line">		<span class="keyword">int</span> q;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld%d%d"</span>,&amp;n,&amp;x0,&amp;a,&amp;b,&amp;mod,&amp;q);</span><br><span class="line">		ll aj=ksm(a,t1,mod);</span><br><span class="line">		ll val=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=t2;i++)&#123;</span><br><span class="line">			val=val*aj%mod;</span><br><span class="line">			<span class="keyword">if</span>(!Hash.count(val)) Hash[val]=i*t1;</span><br><span class="line">		&#125;</span><br><span class="line">		ll temp=((a<span class="number">-1</span>)*x0%mod+b)%mod;</span><br><span class="line">		ll fz=ksm(temp,mod<span class="number">-2</span>,mod);</span><br><span class="line">		<span class="keyword">while</span>(q--)&#123;</span><br><span class="line">			ll v;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;v);</span><br><span class="line">			<span class="keyword">if</span>(a==<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span>(v==x0) <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(v==b) <span class="built_in">printf</span>(<span class="string">"1\n"</span>);</span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="number">1</span>)&#123;</span><br><span class="line">				ll ans=((v-x0)%mod+mod)%mod*ksm(b,mod<span class="number">-2</span>,mod)%mod;</span><br><span class="line">				<span class="keyword">if</span>(ans&lt;n) <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">int</span> ans=mod+<span class="number">1</span>;</span><br><span class="line">				v=(v*(a<span class="number">-1</span>)%mod+b)%mod*fz%mod;</span><br><span class="line">				val=v;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=t1;i++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(Hash.count(val)) ans=min(ans,Hash[val]-i);</span><br><span class="line">					val=val*a%mod;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(ans==mod+<span class="number">1</span>||ans&gt;=n) <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</span><br><span class="line">				<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//system("pause");</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -626,6 +642,10 @@ b & 0  \\
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/08/02/hdu多校第四场/" rel="prev" title="hdu多校第四场">
+                hdu多校第四场 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -695,7 +715,7 @@ b & 0  \\
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -742,7 +762,9 @@ b & 0  \\
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -797,7 +819,9 @@ b & 0  \\
                     
                       
                     
-                    <span class="site-state-item-count">21</span>
+                      
+                    
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -879,7 +903,7 @@ b & 0  \\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-digits-2"><span class="nav-number">1.</span> <span class="nav-text">A digits 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-generator-1"><span class="nav-number">2.</span> <span class="nav-text">B generator 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-digits-2"><span class="nav-number">1.</span> <span class="nav-text">A digits 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-generator-1"><span class="nav-number">2.</span> <span class="nav-text">B generator 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-generator-2"><span class="nav-number">3.</span> <span class="nav-text">C generator 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意-1"><span class="nav-number">3.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路-1"><span class="nav-number">3.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码-1"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>

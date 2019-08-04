@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛客多校第六场]]></title>
+    <url>%2F2019%2F08%2F04%2F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%E7%AC%AC%E5%85%AD%E5%9C%BA%2F</url>
+    <content type="text"><![CDATA[D Move题意 要把n个物品放到k个盒子里,每个物品都有一个体积,每次找与这个盒子最接近的体积放进去,直到放不下,然后去放下一个盒子直到放完,求盒子最小的体积. 思路显然这个题每个不能二分体积,然后暴力找体积范围为[ceil(sum/k),ceil(sum/k)+maxV] ,sum是所有物品的总体积,maxV是最大的体积,对于每个体积在按题意模拟即可. 代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn=1e3+10;int a[maxn];int n,m,k;bool check(int mid)&#123; multiset&lt;int&gt; s; for (int i = 1; i &lt;= n; i++) s.insert(a[i]); for (int i = 1; i &lt;= k; i++)&#123; int lst=mid; auto it=s.upper_bound(lst); while(it!=s.begin())&#123; lst-=*(--it); s.erase(it); it=s.upper_bound(lst); &#125; &#125; if (s.empty()) return true; return false;&#125;int main()&#123; int _; while(~scanf("%d",&amp;_))&#123; int id=0; while(_--)&#123; scanf("%d%d",&amp;n,&amp;m); int maxx=0; int sum=0; k=m; for(int i=1;i&lt;=n;i++)&#123; scanf("%d",&amp;a[i]); maxx=max(a[i],maxx); sum+=a[i]; &#125; int ans=ceil(1.0*sum/m); for(int i=ceil(1.0*sum/m);i&lt;=ceil(sum/m)+maxx;i++)&#123; if(check(i)) &#123; ans=i; break; &#125; &#125; printf("Case #%d: %d\n",++id,ans); &#125; &#125;&#125; J Upgrading Technology题意有i个技术初始为0级,可升最高等级为j级,第i个技术j-1级时升一级消费$c_{ij}$当所有物品升到同一级时会有$d_j$的利润,问最大的利润是多少. 思路记录后缀最小然后依次比较就行了. 思路12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include &lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;const int maxn = 1e3 + 10;ll a[maxn][maxn];ll b[maxn][maxn];ll d[maxn];int main()&#123; int _; while (~scanf("%d", &amp;_))&#123; int id = 0; while (_--)&#123; int n, m; scanf("%d%d", &amp;n, &amp;m); for (int i = 1; i &lt;= n; i++)&#123; a[i][0]=0; for (int j = 1; j &lt;= m; j++)&#123; scanf("%lld", &amp;a[i][j]); a[i][j] += a[i][j - 1]; b[i][j] = a[i][j]; &#125; &#125; for (int i = n; i &gt;= 1; i--)&#123; for (int j = m - 1; j &gt;= 0; j--)&#123; a[i][j] = min(a[i][j], a[i][j + 1]); &#125; &#125; for (int i = 1; i &lt;= m; i++)&#123; scanf("%lld", &amp;d[i]); d[i] += d[i - 1]; &#125; ll ans = 0; for (int i = 0; i &lt;= m; i++)&#123; ll anss = 0; for (int j = 1; j &lt;= n; j++)&#123; anss += a[j][i]; &#125; ll an = 1e18; for (int j = 1; j &lt;= n; j++)&#123; an = min(an, anss - a[j][i] + b[j][i]); &#125; ans = max(ans, d[i] - an); &#125; printf("Case #%d: %lld\n", ++id, ans); &#125; &#125; //system("pause");&#125;]]></content>
+      <categories>
+        <category>牛客多校</category>
+      </categories>
+      <tags>
+        <tag>牛客多校</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hdu多校第二场]]></title>
+    <url>%2F2019%2F08%2F02%2Fhdu%E5%A4%9A%E6%A0%A1%E7%AC%AC%E4%BA%8C%E5%9C%BA%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[hdu多校第一场]]></title>
+    <url>%2F2019%2F08%2F02%2Fhdu%E5%A4%9A%E6%A0%A1%E7%AC%AC%E4%B8%80%E5%9C%BA%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>hdu多校</category>
+      </categories>
+      <tags>
+        <tag>hdu多校</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hdu多校第三场]]></title>
+    <url>%2F2019%2F08%2F02%2Fhdu%E5%A4%9A%E6%A0%A1%E7%AC%AC%E4%B8%89%E5%9C%BA%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[hdu多校第四场]]></title>
+    <url>%2F2019%2F08%2F02%2Fhdu%E5%A4%9A%E6%A0%A1%E7%AC%AC%E5%9B%9B%E5%9C%BA%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[牛客多校第五场]]></title>
     <url>%2F2019%2F08%2F02%2F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%E7%AC%AC%E5%9B%9B%E5%9C%BA%2F</url>
-    <content type="text"><![CDATA[A digits 2B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n]]></content>
+    <content type="text"><![CDATA[A digits 2签到题 B generator 1题意 求x_{i}=ax_{i-1}+bx_{x-2}(mod MOD),i≥2,1≤n]]></content>
       <categories>
         <category>牛客多校</category>
       </categories>
