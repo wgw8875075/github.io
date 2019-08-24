@@ -35,7 +35,13 @@
   <entry>
     <title><![CDATA[hdu多校第四场]]></title>
     <url>%2F2019%2F08%2F02%2Fhdu%E5%A4%9A%E6%A0%A1%E7%AC%AC%E5%9B%9B%E5%9C%BA%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[B xor题意有n个基合每个集合都有小于等于32个数,有m个查询,每个查询为l,r,x,代表l~r区间内,是否每个集合都可以独立表示x这个数. 思路用线段树维护区间内的线性基交,然后查询区间线性基是否可以表示x. 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081#include&lt;bits/stdc++.h&gt;using namespace std;# define ls (pos&lt;&lt;1)# define rs ((pos&lt;&lt;1)|1)const int maxn=5e4+10;unsigned tree[maxn&lt;&lt;2][32];void insert(unsigned x,int pos)&#123; for(int i=31;i&gt;=0;i--) if(x&gt;&gt;i)&#123; if(!tree[pos][i])&#123; tree[pos][i]=x; break; &#125; x^=tree[pos][i]; &#125;&#125;void push_up(int pos)&#123; int l=ls,r=rs; unsigned t1[32],t2[32]; for(int i=0;i&lt;=31;i++) t1[i]=t2[i]=tree[l][i]; for(int i=0;i&lt;=31;i++) if(tree[r][i])&#123; unsigned x=tree[r][i],tmp=0; for(int j=31;j&gt;=0;j--) if(x&gt;&gt;j)&#123; if(!t1[j])&#123; t1[j]=x; t2[j]=tmp; break; &#125; x^=t1[j]; tmp^=t2[j]; &#125; if(!x) insert(tmp,pos); &#125;&#125;void build(int l,int r,int pos)&#123; if(l==r)&#123; int c; scanf("%d",&amp;c); for(int i=1;i&lt;=c;i++)&#123; unsigned x; scanf("%u",&amp;x); insert(x,pos); &#125; return ; &#125; int mid=(l+r)&gt;&gt;1; build(l,mid,ls); build(mid+1,r,rs); push_up(pos);&#125;int query(int x,int y,unsigned int val,int l, int r,int pos)&#123; if(l&gt;=x&amp;&amp;y&gt;=r)&#123; for(int i=31;i&gt;=0;i--) if(val&gt;&gt;i) val^=tree[pos][i]; return val==0; &#125; int mid=l+r&gt;&gt;1; int res=1; if(x&lt;=mid) res&amp;=query(x,y,val,l,mid,ls); if(y&gt;mid) res&amp;=query(x,y,val,mid+1,r,rs); return res;&#125;int main()&#123; int n,m; scanf("%d%d",&amp;n,&amp;m); build(1,n,1); for(int i=1;i&lt;=m;i++)&#123; int x,y; unsigned val; scanf("%d%d%u",&amp;x,&amp;y,&amp;val); printf("%s\n",query(x,y,val,1,n,1)?"YES":"NO"); &#125; //system("pause");&#125;]]></content>
+      <categories>
+        <category>牛客多校</category>
+      </categories>
+      <tags>
+        <tag>牛客多校</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[牛客多校第五场]]></title>
